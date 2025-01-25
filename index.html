@@ -43,12 +43,12 @@
 </head>
 <body>
 
-    <h1>Valentine's Day Quiz</h1>
-    <p>Let's test your knowledge about Valentine's Day!</p>
+    <h1>Lovely little quiz</h1>
+    
 
     <div id="quiz-container">
         <div class="question" id="question1">
-            <p>What color is associated with Valentine's Day?</p>
+            <p>When is the first day we met?</p>
             <button class="answer-btn" onclick="checkAnswer('red', 'question1')">17 April</button>
             <button class="answer-btn" onclick="checkAnswer('pink', 'question1')">19 April</button>
             <button class="answer-btn" onclick="checkAnswer('blue', 'question1')">20 April</button>
@@ -56,7 +56,7 @@
     </div>
 
     <div id="question2" style="display:none;">
-        <p class="question">What did we not do ont eh first date?</p>
+        <p class="question">What did we not do on our first date?</p>
         <button class="answer-btn" onclick="checkAnswerFlower('rose')">Cafe</button>
         <button class="answer-btn" onclick="checkAnswerFlower('tulip')">Bar</button>
         <button class="answer-btn" onclick="checkAnswerFlower('lily')">Movie</button>
@@ -70,10 +70,10 @@
     </div>
 
     <div id="question4" style="display:none;">
-        <p class="question">What is the date of Valentine's Day?</p>
-        <button class="answer-btn" onclick="checkAnswerDate('february 14')">February 14</button>
-        <button class="answer-btn" onclick="checkAnswerDate('march 14')">March 14</button>
-        <button class="answer-btn" onclick="checkAnswerDate('december 14')">December 14</button>
+        <p class="question">What is my favourite feature of u?</p>
+        <button class="answer-btn" onclick="checkAnswerDate('february 14')">Nose</button>
+        <button class="answer-btn" onclick="checkAnswerDate('march 14')">Eyes</button>
+        <button class="answer-btn" onclick="checkAnswerDate('december 14')">Lips</button>
     </div>
 
     <div id="final-question" style="display:none;">
@@ -92,13 +92,13 @@
 
             if (answer.toLowerCase() === correctAnswer) {
                 correctAnswers++;
-                document.getElementById(questionId).innerHTML = "<p>Correct! Let's move to the next question...</p>";
+                document.getElementById(questionId).innerHTML = "<p>Good job my baby!!</p>";
                 setTimeout(() => {
                     document.getElementById('question1').style.display = 'none';
                     displayNextQuestion('question2');
                 }, 1000);
             } else {
-                alert("Oops, that's not right. Try again!");
+                alert("Wrong!!! U OWE ME HEAD NOW!!");
             }
         }
 
@@ -111,13 +111,13 @@
 
             if (answer.toLowerCase() === correctAnswer) {
                 correctAnswers++;
-                document.getElementById('question2').innerHTML = "<p>Correct! Let's move to the next question...</p>";
+                document.getElementById('question2').innerHTML = "<p>Ofc u shld be getting this correct, if ukwim *wink wink*</p>";
                 setTimeout(() => {
                     document.getElementById('question2').style.display = 'none';
                     displayNextQuestion('question3');
                 }, 1000);
             } else {
-                alert("Oops, that's not right. Try again!");
+                alert("HOW COULD U GET THIS WRONG!!");
             }
         }
 
@@ -126,28 +126,28 @@
 
             if (answer.toLowerCase() === correctAnswer) {
                 correctAnswers++;
-                document.getElementById('question3').innerHTML = "<p>Correct! Let's move to the next question...</p>";
+                document.getElementById('question3').innerHTML = "<p>Im surprised u know hehehe</p>";
                 setTimeout(() => {
                     document.getElementById('question3').style.display = 'none';
                     displayNextQuestion('question4');
                 }, 1000);
             } else {
-                alert("Oops, that's not right. Try again!");
+                alert("Need send u to chinese classes already!! HMPH!!");
             }
         }
 
         function checkAnswerDate(answer) {
-            const correctAnswer = 'february 14'; // Fourth question's correct answer is February 14
+            const correctAnswer = 'march 14'; // Fourth question's correct answer is February 14
 
             if (answer.toLowerCase() === correctAnswer) {
                 correctAnswers++;
-                document.getElementById('question4').innerHTML = "<p>Correct! Let's move to the final question...</p>";
+                document.getElementById('question4').innerHTML = "<p>Yes but...I LIKE EVERY PART OF U!!!</p>";
                 setTimeout(() => {
                     document.getElementById('question4').style.display = 'none';
                     displayFinalQuestion();
                 }, 1000);
             } else {
-                alert("Oops, that's not right. Try again!");
+                alert("RAWR I GNA BITE U!!");
             }
         }
 
@@ -159,9 +159,9 @@
             let message = '';
 
             if (answer === 'yes') {
-                message = 'Yay! I’m so happy! 💖 Happy Valentine\'s Day!';
+                message = 'HEHEHE I LOVE YOU!! 💖 Happy Valentine\'s Day!';
             } else {
-                message = 'Aww, maybe next time! 💔';
+                message = 'DUN CARE!! URE STILL GNA BE MY VALENTINE 💔';
             }
 
             document.getElementById('final-question').style.display = 'none';
